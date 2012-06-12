@@ -53,13 +53,13 @@ namespace native
          *  Increments loop's reference count by 1.
          *  Internally, this function just calls uv_ref() function.
          */
-        void ref() { uv_ref(uv_loop_); }
+        // void ref() { uv_ref(uv_loop_); } // TODO: Enable again, disabled because of compilation issues
 
         /*!
          *  Decrements loop's reference count by 1.
          *  Internally, this function just calls uv_unref() function.
          */
-        void unref() { uv_unref(uv_loop_); }
+        // void unref() { uv_unref(uv_loop_); } // TODO: Enable again, disabled because of compilation issues
 
         /*!
          *  ...
