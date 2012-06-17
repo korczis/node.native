@@ -41,13 +41,13 @@ namespace native
          *  Starts the loop.
          *  Internally, this function just calls uv_run() function.
          */
-        bool run() { return uv_run(uv_loop_)==0; }
+        inline bool run() { return uv_run(uv_loop_)==0; }
 
         /*!
          *  Polls for new events without blocking.
          *  Internally, this function just calls uv_run_once() function.
          */
-        bool run_once() { return uv_run_once(uv_loop_)==0; }
+        inline bool run_once() { return uv_run_once(uv_loop_)==0; }
 
         /*!
          *  Increments loop's reference count by 1.
@@ -89,7 +89,7 @@ namespace native
     /*!
      *  Starts the default loop.
      */
-    int run()
+    inline int run()
     {
         return uv_run(uv_default_loop());
     }
@@ -97,7 +97,7 @@ namespace native
     /*!
      *  Polls for new events without blocking for the default loop.
      */
-    int run_once()
+    inline int run_once()
     {
         return uv_run(uv_default_loop());
     }

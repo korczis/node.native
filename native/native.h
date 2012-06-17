@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef __NATIVE_H__
 #define __NATIVE_H__
 
